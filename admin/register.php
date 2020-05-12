@@ -24,7 +24,7 @@ require_once "auth_header.php"; ?>
             <form action="handlers/register.php" method="post">   
                 <div class="form-group">
                     <label> Staff ID </label>
-                    <input type="number" name="staff_id" required>
+                    <input type="text" name="staff_id" required>
                 </div>
                 <div class="form-group">
                     <label> Full Name </label>
@@ -37,12 +37,17 @@ require_once "auth_header.php"; ?>
                 <div class="form-group">
                     <label> Password </label>
                     <input type="password" name="password" required>
-                </div>                                                                
+                </div>
+
+                <div class="form-group">
+                    <label> Confirm Password </label>
+                    <input type="password" name="confirm" required>
+                </div>                                                                                
                 <div class="form-group" style="margin-top: 0;">                    
                     <input type="submit" value="REGISTER">
                 </div>       
                 <div class="form-group">
-                    <a href="register.php">Register</a> | <a href="reset.php">Forgot Password?</a>
+                    <a href="index.php">Login</a> | <a href="reset.php">Forgot Password?</a>
                 </div>                     
             </form>   
         </aside>

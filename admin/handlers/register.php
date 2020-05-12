@@ -12,11 +12,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         die();
     }
 
-    if (strlen($_POST["password"]) < 6) {
-        $_SESSION['error'] = 'Password too short, must be at least six characters';
+    if (strlen($_POST["staff_id"]) < 7) {
+        $_SESSION['error'] = 'Staff ID too short, must be at least seven characters';
         header("location: ../register.php");
         die();
     }
+
+    if (strlen($_POST["password"]) < 7) {
+        $_SESSION['error'] = 'Password too short, must be at least seven characters';
+        header("location: ../register.php");
+        die();
+    }
+
+    
+    if ($_POST["password"] !== $_POST["confirm"]) {
+        $_SESSION['error'] = 'Passwords do not match';
+        header("location: ../register.php");
+        die();
+    }
+
 
     $staff_id = name_input($_POST['staff_id']);
     $checkStaffId = "SELECT * FROM administrators where staff_id = '$staff_id'";

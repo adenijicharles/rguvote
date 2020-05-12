@@ -11,13 +11,15 @@ if(!$_SESSION['student_id']){
 <head>
     <title> RGU Vote - Welcome Page </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="css/modifiers.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
     <script src="sweetalert/jquery.min.js"></script>
     <script src="sweetalert/jquery-2.1.3.min.js"></script>
 </head>
-<body>
+<body style="background-color: transparent;">
     <header>
         <div id="logo">
             <a href="welcome.php" style="text-decoration: none; ">
@@ -28,7 +30,6 @@ if(!$_SESSION['student_id']){
             Welcome <?php echo $_SESSION['student_name']?> (<?php echo $_SESSION["student_id"]; ?>) -- <a href="profile.php"> Manage Profile </a> -- <a href="logout.php"> Logout </a>
         </div>
     </header>
-
     <?php if(isset($_SESSION['success'])){?>
         <div class="status_message">
             <div class="success">
@@ -44,39 +45,36 @@ if(!$_SESSION['student_id']){
             </div>
         </div>
     <?php } ?>
-
     <main>
         <section>
-            <h1 class="margin-t20 text-center fs-30">Manage Profile</h1>
+            <h1 class="margin-t20 text-center fs-30">Update Password</h1>
         </section>
-        <?php
-            $student_id = $_SESSION["student_id"];
-            $sql = "SELECT * FROM voters where student_id = '$student_id'";
-            $query = mysqli_query($connect, $sql);
-            $row = mysqli_fetch_array($query);
-        ?>
-        <div class="w-50 mx-auto text-center margin-t20 margin-b20" style="height: 300px;">
-            <div class="w-50" style="float:left;">
-                <p><p class="text-bold">Student ID</p><?= $row['student_id'] ?></p>
-                <p><p class="text-bold">Firstname</p><?= $row['firstname'] ?></p>
+        <section class="margin-t20 margin-b50">
+            <?php
+                $student_id = $_SESSION["student_id"];
+                $sql = "SELECT * FROM voters where student_id = '$student_id'";
+                $query = mysqli_query($connect, $sql);
+                $row = mysqli_fetch_array($query);
+            ?>
+        
+            <div class="inner margin_auto">
+                <form action="handlers/change_password.php" method="post">
+                    <div class="form-box-inline margin-b20 border-purple border-round">
+                        <input name="password" type="password" placeholder="New password" required>
+                    </div>
+
+                    <div class="form-box-inline margin-b20 border-purple border-round">
+                        <input type="password" placeholder="Confirm New Password" required name="confirm_password">
+                    </div>
+
+                    
+
+                    <!-- <div class="form-box-inline margin-b20"> -->
+                        <button type="submit" value="" class="border-purple border-round bg-purple">Update Password</button>
+                    <!-- </div> -->
+                </form>
             </div>
-            <div class="w-50" style="float:left;">
-                <p><p class="text-bold">Surname</p><?= $row['surname'] ?></p>
-                <p><p class="text-bold">Email</p><?= $row['email'] ?></p>
-            </div>
-            <div class="w-50" style="float:left;">
-                <p><p class="text-bold">Gender</p><?= $row['gender'] ?></p>
-                <p><p class="text-bold">Level</p><?= $row['level'] ?></p>
-            </div>
-            <div class="w-50" style="float:left;">
-                <p><p class="text-bold">Department</p><?= $row['department'] ?></p>
-                <p><p class="text-bold">Ethnicity</p><?= $row['ethnicity'] ?></p>
-            </div>
-            <div>
-                <a href="edit_profile.php"><button class="btn">Edit Profile</button></a>
-                <a href="reset.php"><button class="btn">Change Password</button></a>
-            </div>
-        </div>
+        </section>
     </main>
 
 
@@ -85,7 +83,7 @@ if(!$_SESSION['student_id']){
     </footer>
 
 
-<script type="text/javascript" src="js/app.js"> </script>
+    <script type="text/javascript" src="js/app.js"> </script>
 </body>
 </html>
 

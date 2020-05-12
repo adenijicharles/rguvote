@@ -33,6 +33,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         die();
     }
 
+    if (strlen($_POST["student_id"]) < 7) {
+        $_SESSION['error'] = 'Student ID is too short, must be at least seven characters';
+        header("location: ../register.php");
+        die();
+    }
+
     if ($_POST["password"] !== $_POST["confirm_password"]) {
         $_SESSION['error'] = 'Passwords do not match';
         header("location: ../register.php");
