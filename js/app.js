@@ -57,9 +57,9 @@ function performRequest(nominee_id, nominee_name, position_name, student_id, pos
                             title: res.message,
                             type: "warning"
                         });   
-                        setTimeOut(function(){
-                            window.location.href = "welcome.php";
-                        }, 6000)                        
+setTimeout(function(){ 
+	window.location.href = "welcome.php"; }, 4000);
+                                         
                     }                            
                 });
         }

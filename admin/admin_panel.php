@@ -9,5 +9,7 @@
 
     echo $_SESSION['fullname']; 
     echo "<br>";
-    echo $_SESSION['staff_id']; 
+    echo $_SESSION['staff_id'];
+
 ?>
+<a href="profile.php"> Manage Profile </a>

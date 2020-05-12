@@ -19,7 +19,7 @@ if ($_POST) {
         $encrypted_email = md5($row['email']);
         $encrypted_password = md5($row['password']);
         $requested_time = time();
-        $url = $_SERVER['HTTP_HOST'] . str_replace('handlers/reset_link.php','',$_SERVER['REQUEST_URI']);
+        $url = 'http://' . $_SERVER['HTTP_HOST'] . str_replace('handlers/reset_link.php','',$_SERVER['REQUEST_URI']);
         $message_body = '
             <html>
                 <head></head>

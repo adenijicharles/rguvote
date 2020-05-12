@@ -54,3 +54,64 @@ a{
     outline: 2px solid #000 !important;
     padding: 2px;
 }
+
+.fs-30 {
+    font-size: 30px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.border-purple {
+    border: 1px solid purple;
+}
+
+.border-round {
+    border-radius: 5px;
+}
+
+.bg-grey {
+    background-color: rgb(155, 137, 137, 0.5);
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+.status_message {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 1%;
+    font-size: 12px ;
+}
+
+.success {
+    width: 100%;
+    padding: 1%;
+    margin: auto;
+    color: white;
+    background-color: #71dd8a;
+}
+
+.error {
+    width: 100%;
+    padding: 1%;
+    margin: auto;
+    background-color: #c82333;
+    color: white;
+}

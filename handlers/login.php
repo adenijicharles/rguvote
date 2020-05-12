@@ -23,11 +23,11 @@ if ($_POST) {
             $_SESSION['student_name'] = $row['surname']. " ".$row['firstname'];
             redirect_to("../welcome.php");
         }else {
-            $_SESSION['error'] = "Username or password is incorrecbt";
+            $_SESSION['error'] = "Student ID or password is incorrect";
             redirect_to("../login.php");
         }
     } else {
-        $_SESSION['error'] = "Username or password is incorrect";
+        $_SESSION['error'] = "Student ID or password is incorrect";
         redirect_to("../login.php");
     }
 }

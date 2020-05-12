@@ -145,3 +145,16 @@ footer {
 footer p {
     margin-left: 50px;
 }
+
+button.btn {
+    /* width: 200px; */
+    /* height: 50px; */
+    /* display: block; */
+    border-radius: 5px;
+    background-color: #800080;
+    cursor: pointer;
+    border: none;
+    /* margin-top: 50px; */
+    color: white;
+    padding: 10px;
+}

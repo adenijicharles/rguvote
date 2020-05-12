@@ -15,7 +15,8 @@ if ($_POST) {
     }
 
     $email = mysqli_real_escape_string($connect, $_POST["email"]);
-    $sql = "SELECT * FROM administrator where email = '$email'";
+
+    $sql = "SELECT * FROM administrators where email = '$email'";
     $query = mysqli_query($connect, $sql);
     $row = mysqli_fetch_array($query);
     $numrow = mysqli_num_rows($query);

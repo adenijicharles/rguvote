@@ -20,9 +20,9 @@ if($_POST) {
         if(password_verify($password, $hashedPassword)) {
             $_SESSION["staff_id"] = $row['staff_id'];
             $_SESSION['fullname'] = $row['fullname'];
-            redirect_to("../dashboard.php");
+            redirect_to("../admin_panel.php");
         }else {
-            $_SESSION['error'] = "Staff ID or password is incorrecbt";
+            $_SESSION['error'] = "Staff ID or password is incorrect";
             redirect_to("../index.php");
         }
     } else {

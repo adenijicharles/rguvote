@@ -27,7 +27,7 @@ if(!$_SESSION['student_id']){
             </a>
         </div>
         <div id="nav">
-            Welcome <?php echo $_SESSION['student_name']?> (<?php echo $_SESSION["student_id"]; ?>) -- <a href="logout.php"> Logout </a>
+            Welcome <?php echo $_SESSION['student_name']?> (<?php echo $_SESSION["student_id"]; ?>) -- <a href="profile.php"> Manage Profile </a> -- <a href="logout.php"> Logout </a>
         </div>
     </header>
     <div id="loader">

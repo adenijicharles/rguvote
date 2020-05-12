@@ -31,16 +31,16 @@ if($_POST) {
 
     $password = password_hash(($_POST['password']), PASSWORD_DEFAULT);
 
-    $sql = "UPDATE administrator SET password = '$password' WHERE md5(email) ='$encrypted_email'";
+    $sql = "UPDATE administrators SET password = '$password' WHERE md5(email) ='$encrypted_email'";
     $query = mysqli_query($connect, $sql);
     if($query){
         $_SESSION['success'] = "Password changed successfully";
         unset($_SESSION['form_values']);
-        redirect_to("../login.php");
+        redirect_to("../index.php");
     }else{
         $_SESSION['error'] = "Unable to reset your password. Please try again later"; 
         unset($_SESSION['form_values']);
-        redirect_to("../forgot.php");
+        redirect_to("../reset.php");
     }       
 }
 
