@@ -40,10 +40,11 @@
 			</header>
 			<div class="desktop">
 				<div class="sidebar-link"><a href="dashboard.php"><i class="fa fa-home"></i> DASHBOARD </a></div>
-				<div class="sidebar-link"><a href="positions.php" title="Orders"><i class="fa fa-eyedropper"></i> POSITIONS </a></div>
-				<div class="sidebar-link"><a href="nominees.php" title="Orders"><i class="fa fa-eyedropper"></i> NOMINEES </a></div>	
-				<div class="sidebar-link"><a href="votes.php" title="Orders"><i class="fa fa-eyedropper"></i> VOTES </a></div>			
-				<div class="sidebar-link"><a href="results.php" title="Orders"><i class="fa fa-eyedropper"></i> RESULTS </a></div>
+				<div class="sidebar-link"><a href="positions.php"><i class="fa fa-eyedropper"></i> POSITIONS </a></div>
+				<div class="sidebar-link"><a href="nominees.php"><i class="fa fa-eyedropper"></i> NOMINEES </a></div>	
+				<div class="sidebar-link"><a href="votes.php"><i class="fa fa-eyedropper"></i> VOTES </a></div>			
+				<div class="sidebar-link"><a href="results.php"><i class="fa fa-eyedropper"></i> RESULTS </a></div>
+				<div class="sidebar-link"><a href="profile.php"><i class="fa fa-eyedropper"></i> UPDATE PROFILE </a></div>
 				<div class="sidebar-link"><a href="logout.php" title="Logout"><i class="fa fa-sign-out"></i> LOGOUT </a></div>						
 			</div>
 		</div>
