@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-size: 13px;
+    font-family: 'Maven Pro', sans-serif;
+    line-height: 25px;
+}
+
+.account-form {
+    max-width: 350px;
+    height: auto;
+}
+
+.form-group {
+    width: 100%;
+    height: auto;
+}
+
+.form-group label {
+    display: block;
+}
+
+.status_message {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 1%;
+    font-size: 12px ;
+  }
+  
+  .success {
+    width: 100%;
+    padding: 1%;
+    margin: auto;
+    color: white;
+    background-color: #71dd8a;
+  }
+  
+  .error {
+    width: 100%;
+    padding: 1%;
+    margin: auto;
+    background-color: #c82333;
+    color: white;
+  }

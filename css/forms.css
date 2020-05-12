@@ -1,0 +1,43 @@
+button {
+  width: 200px;
+  height: auto;
+  padding: 15px;
+  display: block;
+  background-color: #AB82B2;
+  cursor: pointer;
+  border: none;
+  color: #FFF;
+}
+
+button:hover{
+  background-color: #9D72E9;
+}
+
+::placeholder {
+  font-size: 12px;
+}
+
+select, input{
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 13px 2%;
+}
+
+input[type="submit"]{
+  background-color: #AB82B2;
+  cursor: pointer;
+  color: white;
+}
+
+input[type="submit"]:hover{
+  background-color: #9D72E9;
+}
+
+input[type='password'],
+input[type='email'],
+input[type='number'],
+input[type='text']{
+  width: 96%;
+}
