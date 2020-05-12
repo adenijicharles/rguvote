@@ -24,7 +24,7 @@ require_once "auth_header.php"; ?>
             <form action="handlers/login.php" method="post">                  
                 <div class="form-group">
                     <label> Staff ID </label>
-                    <input type="Number" name="staff_id" required>
+                    <input type="text" name="staff_id" required>
                 </div>           
                 <div class="form-group">
                     <label> Password </label>
