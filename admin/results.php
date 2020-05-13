@@ -51,8 +51,9 @@ include "includes/header.php";
                         <td colspan="2"></td>
                     </tr>
                     <tr>
-                        <td> Highest Votes</td>
+                        <td> <b>Highest Votes</b></td>
                         <td>
+                            <span style="color: green; font-weight: bold">
                         <?php 
                         if(count($data)) {
                             $value = max($data);
@@ -60,7 +61,7 @@ include "includes/header.php";
                             $nominees = mysqli_query($connect, "SELECT * FROM nominees WHERE id = '$winner_id'");
                             $fetch_name = mysqli_fetch_array($nominees);
                             echo $fetch_name['name'];
-                        } ?>
+                        } ?></span>
                         </td>
                     </tr>
                 </table>
