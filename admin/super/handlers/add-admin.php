@@ -59,8 +59,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO administrators (staff_id, fullname, email, password) VALUES ('$staff_id', '$fullname', '$email', '$password')";
     $query = mysqli_query($connect, $sql);
-    $_SESSION['success'] = 'Administrator created successfully.';
-    unset($_SESSION['form_values']);
-    header("location: ../index.php");
+    if($query){
+        $_SESSION['success'] = 'Administrator created successfully.';
+        header("location: ../index.php");
+    }else{
+        $_SESSION['error'] = 'Unable to add new administrator details';
+        header("location: ../add-admin.php");
+    }
 }
 
