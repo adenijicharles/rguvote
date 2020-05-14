@@ -39,7 +39,7 @@
 				<img src="../assets/image/logo.png">
 			</header>
 			<div class="desktop">
-				<div class="sidebar-link"><a href="dashboard.php"><i class="fa fa-home"></i> ADMINISTRATORS </a></div>
+				<div class="sidebar-link"><a href="index.php"><i class="fa fa-home"></i> ADMINISTRATORS </a></div>
 				<div class="sidebar-link"><a href="../positions.php"><i class="fa fa-eyedropper"></i> POSITIONS </a></div>
 				<div class="sidebar-link"><a href="../nominees.php"><i class="fa fa-eyedropper"></i> NOMINEES </a></div>	
 				<div class="sidebar-link"><a href="../votes.php"><i class="fa fa-eyedropper"></i> VOTES </a></div>			
