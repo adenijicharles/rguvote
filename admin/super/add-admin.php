@@ -20,7 +20,7 @@ include "includes/header.php";
                 </div>
                 <div class="form-body">
                     <label> Full Name </label>
-                    <input type="text" required name="name">
+                    <input type="text" required name="fullname">
                 </div>
                 <div class="form-body">
                     <label> Email Address </label>
