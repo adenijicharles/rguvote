@@ -6,6 +6,13 @@ require_once "includes/auth.php";
 $id = $_GET['id'];
 $query1 = mysqli_query($connect, "SELECT * FROM nominees WHERE id = '$id'");
 $query = mysqli_query($connect, 'SELECT * FROM positions ORDER BY name ASC');
+
+function getPositionName($id){
+    global $connect;
+    $query = mysqli_query($connect, "SELECT * FROM positions WHERE id = '$id'");
+    $fetch = mysqli_fetch_array($query);
+    return $fetch['name'];
+}
 include "includes/header.php";
 ?>
 	<div class="container">
@@ -72,20 +79,22 @@ include "includes/header.php";
                 </div>
                 <div class="form-body">
                     <label> Bio </label>                    
-                   <textarea name="bio" name="bio" required><?php echo $row['bio']?></textarea>
+                   <textarea name="bio" name="bio" rows="6" required><?php echo $row['bio']?></textarea>
                 </div>      
                 <div class="form-body">
-                    <label> Upload Manifesto Video </label>                    
-                    <input type="file" required name="video">
+                    <label> Upload Manifesto Video (Leave empty if not changing video) </label>                    
+                    <input type="file" name="video">
+                    <input type="hidden" name="old_video" value="<?php echo $row['manifesto']; ?>">
                 </div>    
                 <div class="form-body">
-                    <label> Upload Profile Picture </label>                    
-                    <input type="file" required name="picture">
+                    <label> Upload Profile Picture (Leave empty if not changing profile picture) </label>                    
+                    <input type="file" name="picture">
+                    <input type="hidden" name="old_picture" value="<?php echo $row['picture']; ?>">
                 </div>                                        
                 <div class="form-body">
                     <label> Position </label>                    
-                    <select name="position" required>
-                        <option value="" selected> </option>
+                    <select name="position">
+                        <option value="<?php echo $row['position']; ?>" selected> <?php echo getPositionName($row['position'])?> </option>
                         <?php while($row = mysqli_fetch_array($query)){?>
                             <option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
                         <?php } ?>
