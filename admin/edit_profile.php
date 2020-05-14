@@ -24,10 +24,9 @@ $row = mysqli_fetch_array($query);
 			<div class="full-width">
             <form action="handlers/update_profile.php" method="post">
 
-                <div class="form-body">
-                    <label> Staff ID </label>
-                    <input readonly class="bg-grey" type="text" required value="<?php echo isset($_SESSION['form_values']['staff_id']) ? $_SESSION['form_values']['staff_id'] : $row['staff_id'];?>">
-                </div>
+                
+                    <input readonly class="bg-grey" type="hidden" required value="<?php echo isset($_SESSION['form_values']['staff_id']) ? $_SESSION['form_values']['staff_id'] : $row['staff_id'];?>">
+       
                 <div class="form-body">
                     <label> Full Name </label>
                     <input type="text" required name="fullname" value="<?php echo isset($_SESSION['form_values']['fullname']) ? $_SESSION['form_values']['fullname'] : $row['fullname'];?>">

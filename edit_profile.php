@@ -45,9 +45,9 @@ if(!$_SESSION['student_id']){
         
             <div class="inner margin_auto">
                 <form action="handlers/update_profile.php" method="post">
-                    <div class="form-box-inline margin-b20 border-purple border-round">
-                        <input class="bg-grey" readonly type="text" maxlength="7" placeholder="Student ID" required value="<?php echo $row['student_id'] ;?>">
-                    </div>
+                    
+                        <input class="bg-grey" readonly type="hidden" maxlength="7" placeholder="Student ID" required value="<?php echo $row['student_id'] ;?>">
+                    
 
                     <div class="form-box-inline margin-b20 border-purple border-round">
                         <input type="text" placeholder="First Name" required name="firstname" value="<?php echo isset($_SESSION['form_values']['firstname']) ? $_SESSION['form_values']['firstname'] : $row['firstname'];?>">
