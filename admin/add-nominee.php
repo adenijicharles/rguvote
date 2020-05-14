@@ -91,9 +91,9 @@ include "includes/header.php";
                     <input type="submit" value="Add Nominnee">
                 </div>
 
-                
+
             </form>
 			</div>			
 		</div>
 	</div>
-<?php include "includes/footer.php";?>	
+<?php include "includes/footer.php";?>

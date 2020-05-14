@@ -13,7 +13,7 @@ include "includes/header.php";
 			Welcome <?php echo $_SESSION['fullname']; ?>
         </div>
         <div class="content">
-            <b> Add new nominee </b>
+            <b> Edit nominee details </b>
         </div>
 		<div class="content">
 			<div class="full-width">
@@ -92,7 +92,7 @@ include "includes/header.php";
                     </select>
                 </div>
                 <div class="form-body">
-                    <input type="submit" value="Add Nominnee">
+                    <input type="submit" value="Update Details">
                 </div>
 
                 
