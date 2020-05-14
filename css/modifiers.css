@@ -34,6 +34,14 @@ a{
     text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
 .padding-t100{
     padding-top: 100px;
 }
@@ -90,6 +98,22 @@ a{
 
 .bg-purple {
     background-color: purple;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pr-10 {
+    padding-right: 10px;
 }
 
 .status_message {

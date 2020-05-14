@@ -13,7 +13,7 @@ $nominees = mysqli_query($connect, "SELECT * FROM nominees WHERE position = '$po
 <!DOCTYPE html>
 <html>
 <head>
-    <title> RGU Vote - Welcome Page </title>
+    <title> RGU Vote - Nominees </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link href="css/modifiers.css" rel="stylesheet">

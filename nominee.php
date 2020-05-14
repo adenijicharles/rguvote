@@ -14,7 +14,7 @@ $nominee_data = mysqli_query($connect, "SELECT * FROM nominees WHERE student_id 
 <!DOCTYPE html>
 <html>
 <head>
-    <title> RGU Vote - Welcome Page </title>
+    <title> RGU Vote - Nominee </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link href="css/modifiers.css" rel="stylesheet">

@@ -105,6 +105,10 @@ a {
   margin-left: 10px;
 }
 
+.sidebar-link.sl-active {
+  background: #c55fd3;
+}
+
 .mobile {
   width: 251px;
   height: auto;
@@ -472,5 +476,19 @@ input[type="submit"]:hover {
     margin-bottom: 30px;
   }
 }
+
+/* Custom */
+.bg-grey {
+  background-color: rgb(155, 137, 137, 0.5);
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.w-50 {
+  width: 50%;
+}
+/* Custom */
 
 /*# sourceMappingURL=app.css.map */

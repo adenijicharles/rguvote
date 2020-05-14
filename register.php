@@ -1,4 +1,4 @@
-<?php require_once "header.php" ?>
+<?php $title="Register"; require_once "header.php" ?>
 <main>
     <section class="margin-t50 margin-b50">
         <p class="text-center color-white">
