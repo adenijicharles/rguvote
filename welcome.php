@@ -35,7 +35,11 @@ $status = $fetch['status'];
             Welcome <?php echo $_SESSION['student_name']?> (<?php echo $_SESSION["student_id"]; ?>) -- <a href="profile.php"> Manage Profile </a> -- <a href="logout.php"> Logout </a>
         </div>
     </header>
-        <?php if($status == 1){?>
+        <?php if($status == 0) {?>
+            <div style="width: 900px; margin: 70px auto">
+                Voting not yet started
+            </div>
+        <?php }else if($status == 1){?>
             <div id="loader">
                 <img src="images/loading.gif"> <br>
                 loading............... please wait
@@ -46,7 +50,7 @@ $status = $fetch['status'];
                 Thanks for voting 
             </div>
             <main id="root"></main>
-        <?php } else { ?>
+        <?php } else if($status == 2) { ?>
             <div style="width: 900px; margin: 70px auto">
                 <b> VOTING RESULTS </b>
                 <hr>
