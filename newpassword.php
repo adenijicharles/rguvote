@@ -1,4 +1,4 @@
-<?php require_once "header.php" ?>
+<?php $title="New Password"; require_once "header.php" ?>
     <main>
         <section class="margin-t100 margin-b50">
             <p class="text-center color-white">

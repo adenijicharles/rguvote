@@ -1,4 +1,5 @@
 <?php
+$title = "Login";
 session_start();
 require_once "auth_header.php"; ?>
         <aside>

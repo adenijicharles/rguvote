@@ -1,4 +1,5 @@
 <?php
+$title = "Password Reset";
 session_start();
 require_once "auth_header.php";
 ?>

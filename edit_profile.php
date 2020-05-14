@@ -9,7 +9,7 @@ if(!$_SESSION['student_id']){
 <!DOCTYPE html>
 <html>
 <head>
-    <title> RGU Vote - Welcome Page </title>
+    <title> RGU Vote - Edit Profile </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">

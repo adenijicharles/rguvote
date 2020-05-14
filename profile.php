@@ -9,7 +9,7 @@ if(!$_SESSION['student_id']){
 <!DOCTYPE html>
 <html>
 <head>
-    <title> RGU Vote - Welcome Page </title>
+    <title> RGU Vote - Profile </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
@@ -47,7 +47,7 @@ if(!$_SESSION['student_id']){
 
     <main>
         <section>
-            <h1 class="margin-t20 text-center fs-30">Manage Profile</h1>
+            <h1 class="margin-t20 text-center fs-30">Personal Profile</h1>
         </section>
         <?php
             $student_id = $_SESSION["student_id"];
@@ -55,27 +55,46 @@ if(!$_SESSION['student_id']){
             $query = mysqli_query($connect, $sql);
             $row = mysqli_fetch_array($query);
         ?>
-        <div class="w-50 mx-auto text-center margin-t20 margin-b20" style="height: 300px;">
-            <div class="w-50" style="float:left;">
-                <p><p class="text-bold">Student ID</p><?= $row['student_id'] ?></p>
-                <p><p class="text-bold">Firstname</p><?= $row['firstname'] ?></p>
-            </div>
-            <div class="w-50" style="float:left;">
-                <p><p class="text-bold">Surname</p><?= $row['surname'] ?></p>
-                <p><p class="text-bold">Email</p><?= $row['email'] ?></p>
-            </div>
-            <div class="w-50" style="float:left;">
-                <p><p class="text-bold">Gender</p><?= $row['gender'] ?></p>
-                <p><p class="text-bold">Level</p><?= $row['level'] ?></p>
-            </div>
-            <div class="w-50" style="float:left;">
-                <p><p class="text-bold">Department</p><?= $row['department'] ?></p>
-                <p><p class="text-bold">Ethnicity</p><?= $row['ethnicity'] ?></p>
-            </div>
-            <div>
-                <a href="edit_profile.php"><button class="btn">Edit Profile</button></a>
-                <a href="reset.php"><button class="btn">Change Password</button></a>
-            </div>
+        <div class="w-50 mx-auto text-center margin-t20 margin-b20 border border-purple border-round">
+            <table style="width: 100%;" class="margin-t20 margin-b20">
+                <tr>
+                    <th class="text-bold text-right w-50 pr-10">STUDENT ID</th>
+                    <td class="text-left w-50 pl-10"><?= $row['student_id'] ?></td>
+                </tr>
+                <tr>
+                    <th class="text-bold text-right w-50 pr-10">EMAIL ADDRESS</th>
+                    <td class="text-left w-50 pl-10"><?= $row['email'] ?></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th class="text-bold text-right w-50 pr-10">SURNAME</th>
+                    <td class="text-left w-50 pl-10"><?= $row['surname'] ?></td>
+                </tr>
+                <tr>
+                    <th class="text-bold text-right w-50 pr-10">FIRSTNAME</th>
+                    <td class="text-left w-50 pl-10"><?= $row['firstname'] ?></td>
+                </tr>
+                <tr>
+                    <th class="text-bold text-right w-50 pr-10">GENDER</th>
+                    <td class="text-left w-50 pl-10"><?= $row['gender'] ?></td>
+                </tr>
+                <tr>
+                    <th class="text-bold text-right w-50 pr-10">LEVEL</th>
+                    <td class="text-left w-50 pl-10"><?= $row['level'] ?></td>
+                </tr>
+                <tr>
+                    <th class="text-bold text-right w-50 pr-10">DEPARTMENT</th>
+                    <td class="text-left w-50 pl-10"><?= $row['department'] ?></td>
+                </tr>
+                <tr>
+                    <th class="text-bold text-right w-50 pr-10">ETHNICITY</th>
+                    <td class="text-left w-50 pl-10"><?= $row['ethnicity'] ?></td>
+                </tr>
+            </table>
+        </div>
+        <div class="w-50 text-center mx-auto">
+            <a href="edit_profile.php"><button class="btn">Edit Profile</button></a>
+            <a href="reset.php"><button class="btn">Change Password</button></a>
         </div>
     </main>
 

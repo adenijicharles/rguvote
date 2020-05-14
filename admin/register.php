@@ -1,4 +1,5 @@
 <?php
+$title = "Register";
 session_start();
 require_once "auth_header.php"; ?>
         <aside>

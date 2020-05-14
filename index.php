@@ -1,4 +1,4 @@
-<?php require_once "header.php"; ?>
+<?php $title="Home"; require_once "header.php"; ?>
 <main>
     <section class="margin-b100 margin-t100">
         <p class="text-center color-white">

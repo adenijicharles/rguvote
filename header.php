@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title> Robert Gordon University Aberdeen - RGUVote </title>
+    <title> RGUVote - <?= $title ?> </title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
