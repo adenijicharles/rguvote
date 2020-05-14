@@ -45,7 +45,7 @@ if(!$_SESSION['student_id']){
     </footer>
 
 <script>
-    fetch('http://localhost/rguvote/api/positions.php').then(function(response) {
+    fetch('./api/positions.php').then(function(response) {
         return response.json();
     }).then(function(positions){
         setTimeout(() => {
@@ -84,7 +84,7 @@ if(!$_SESSION['student_id']){
         root.innerHTML = '';
         loader.style.display = 'block';
 
-        fetch(`http://localhost/rguvote/api/nominees.php?position=${position_id}`).then(function(response) {
+        fetch(`./api/nominees.php?position=${position_id}`).then(function(response) {
             return response.json();
         }).then(function(nominees){
 

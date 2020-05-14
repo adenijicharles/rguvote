@@ -32,8 +32,8 @@ require_once "auth_header.php";
                 <input type="submit" value="RESET PASSWORD">
             </div>    
             <div class="form-group">
-                    <a href="register.php">Register</a> | <a href="reset.php">Forgot Password?</a>
-                </div>                        
+                <a href="reset.php">Forgot Password?</a>
+            </div>                        
         </form>   
     </aside>
 <?php require_once "auth_footer.php"; ?>

@@ -53,7 +53,7 @@ $nominees = mysqli_query($connect, "SELECT * FROM nominees WHERE position = '$po
                 <input type="hidden" id="student_id" value="<?php echo $_SESSION['student_id']; ?>">
                 <input type="button" id="button" value="VOTE">
             </article>
-            <div style="clear: both; display: block; content: " "></div>
+            <div style="clear: both; display: block; content: ''"></div>
         </form>
     </section>
 </main>

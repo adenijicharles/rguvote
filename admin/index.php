@@ -35,7 +35,7 @@ require_once "auth_header.php"; ?>
                     <input type="submit" value="LOGIN">
                 </div>  
                 <div class="form-group">
-                    <a href="register.php">Register</a> | <a href="reset.php">Forgot Password?</a>
+                    <a href="reset.php">Forgot Password?</a>
                 </div>                      
             </form>   
         </aside>

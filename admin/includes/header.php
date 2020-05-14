@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
 	<title> RGU Vote - <?= $title ?> </title>
-=======
-	<title> RGU Vote App </title>
->>>>>>> f7a6be79107b57c03fd8980ea2c667f4e311b7d1
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
