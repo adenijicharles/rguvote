@@ -35,6 +35,9 @@ $nominee_data = mysqli_query($connect, "SELECT * FROM nominees WHERE student_id 
 </header>
 <?php while($row = mysqli_fetch_array($nominee_data)){?>
 <main>
+<div style="width: 90%; color: black; margin: 40px auto 0 auto">
+                <a href="welcome.php" style="color: black; font-weight: bold">Go back</a>
+            </div>
     <section id="heading">
         <h3> <?php echo $row['name'];?>, <?php echo $row['level']; ?> <?php echo $row['school']; ?> </h3>
         <p> Contesting For: <?php echo $position_name; ?> </p>

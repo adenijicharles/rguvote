@@ -40,6 +40,9 @@ $status = $fetch['status'];
                 Voting not yet started
             </div>
         <?php }else if($status == 1){?>
+            <div style="width: 90%; color: black; margin: 40px auto 0 auto">
+                <a href="" style="color: black; font-weight: bold">Go back</a>
+            </div>
             <div id="loader">
                 <img src="images/loading.gif"> <br>
                 loading............... please wait
@@ -168,7 +171,7 @@ $status = $fetch['status'];
                         <img src="pictures/${nominee.picture}" class="outline-thick" style="display: block; margin: auto; margin-bottom: 30px">                    
                         <input type="radio" data-name="${nominee.name}" data-pos="${position_name}" data-position-id="${position_id}" id="radio${nominee.id}" name="vote" class="" value="${nominee.id}">                    
                         <span>${nominee.name}</span>
-                        <p> <a target="_blank" href="nominee.php?id=${nominee.student_id}&posname=${position_name}&position=${position_id}">View Profile / Manifesto</a> </p>
+                        <p> <a href="nominee.php?id=${nominee.student_id}&posname=${position_name}&position=${position_id}">View Profile / Manifesto</a> </p>
                     </article>
                     `;            
                 });
